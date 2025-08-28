@@ -20,6 +20,7 @@ class AccountsController extends Controller
                 'available_balance',
                 'currency',
                 'account_type',
+                'kyc_status',
                 'user_id',
                 'created_at'
             ])->with(['user' => function($query) {

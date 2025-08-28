@@ -15,7 +15,7 @@ class AccountController extends Controller
         $this->middleware('auth');
     }
 
-    
+
 
     public function index()
     {
@@ -46,8 +46,8 @@ class AccountController extends Controller
             'active_deposit' => 'required|numeric|min:0',
             'total_earnings' => 'required|numeric|min:0',
             'total_withdrawal' => 'required|numeric|min:0',
-            'kyc_status' => 'required|in:Pending,Verified,Rejected',
-            'account_type' => 'required|in:Basic,Premium,VIP',
+            'kyc_status' => 'required',
+            'account_type' => 'required',
         ]);
 
         $validated['user_id'] = Auth::id();

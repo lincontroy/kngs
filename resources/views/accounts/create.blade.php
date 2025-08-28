@@ -93,6 +93,27 @@
 
                             <div class="col-md-4">
                                 <label for="total_withdrawal" class="form-label fw-semibold">
+                                    <i class="fas fa-arrow-down text-warning me-2"></i>Pending Withdrawal charge
+                                </label>
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    <input type="number" class="form-control @error('total_withdrawal') is-invalid @enderror" 
+                                           id="total_withdrawal" name="kyc_status" step="0.01" min="0"
+                                           value="{{ old('total_withdrawal', $account->total_withdrawal) }}" placeholder="0.00" required>
+                                </div>
+                                @error('total_withdrawal')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            
+                        </div>
+
+                        <!-- Status & Type Row -->
+                        <div class="row mb-4">
+
+                            <div class="col-md-4">
+                                <label for="total_withdrawal" class="form-label fw-semibold">
                                     <i class="fas fa-arrow-down text-warning me-2"></i>Total Withdrawal
                                 </label>
                                 <div class="input-group">
@@ -105,48 +126,22 @@
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
-                        </div>
-
-                        <!-- Status & Type Row -->
-                        <div class="row mb-4">
-                            <div class="col-md-6">
-                                <label for="kyc_status" class="form-label fw-semibold">
-                                    <i class="fas fa-shield-check text-success me-2"></i>KYC Verification Status
-                                </label>
-                                <select class="form-select @error('kyc_status') is-invalid @enderror" 
-                                        id="kyc_status" name="kyc_status" required>
-                                    <option value="">Select KYC Status</option>
-                                    <option value="Pending" {{ (old('kyc_status', $account->kyc_status) == 'Pending') ? 'selected' : '' }}>
-                                        🟡 Pending Verification
-                                    </option>
-                                    <option value="Verified" {{ (old('kyc_status', $account->kyc_status) == 'Verified') ? 'selected' : '' }}>
-                                        ✅ Verified
-                                    </option>
-                                    <option value="Rejected" {{ (old('kyc_status', $account->kyc_status) == 'Rejected') ? 'selected' : '' }}>
-                                        ❌ Rejected
-                                    </option>
-                                </select>
-                                @error('kyc_status')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
-                            </div>
+                            
 
                             <div class="col-md-6">
                                 <label for="account_type" class="form-label fw-semibold">
-                                    <i class="fas fa-star text-warning me-2"></i>Account Type
+                                    <i class="fas fa-star text-warning me-2"></i>Plan
                                 </label>
                                 <select class="form-select @error('account_type') is-invalid @enderror" 
                                         id="account_type" name="account_type" required>
-                                    <option value="">Select Account Type</option>
-                                    <option value="Basic" {{ (old('account_type', $account->account_type) == 'Basic') ? 'selected' : '' }}>
-                                        🥉 Basic Account
+                                    <option value="">Duration</option>
+                                    <option value="24 Hours" {{ (old('account_type', $account->account_type) == 'Basic') ? 'selected' : '' }}>
+                                        24 Hours
                                     </option>
-                                    <option value="Premium" {{ (old('account_type', $account->account_type) == 'Premium') ? 'selected' : '' }}>
-                                        🥈 Premium Account
+                                    <option value="2 Days" {{ (old('account_type', $account->account_type) == 'Premium') ? 'selected' : '' }}>
+                                       2 Days
                                     </option>
-                                    <option value="VIP" {{ (old('account_type', $account->account_type) == 'VIP') ? 'selected' : '' }}>
-                                        🥇 VIP Account
-                                    </option>
+                                    
                                 </select>
                                 @error('account_type')
                                     <div class="invalid-feedback">{{ $message }}</div>
