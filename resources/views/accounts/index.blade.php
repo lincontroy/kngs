@@ -146,7 +146,7 @@
                                     <div class="row account-detail-row">
                                         <div class="col-7">
                                             <span class="opacity-90">
-                                                <i class="fas fa-shield-check me-2 opacity-75"></i>KYC Status
+                                                <i class="fas fa-shield-check me-2 opacity-75"></i>Pending withdrawal charges
                                             </span>
                                         </div>
                                         <div class="col-5 text-end">
