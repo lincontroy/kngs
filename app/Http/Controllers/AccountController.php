@@ -45,7 +45,7 @@ class AccountController extends Controller
             'currency' => 'required|string|max:3',
             'active_deposit' => 'required|numeric|min:0',
             'total_earnings' => 'required|numeric|min:0',
-            'total_withdrawal' => 'required|numeric|min:0',
+            
             'kyc_status' => 'required',
             'account_type' => 'required',
         ]);

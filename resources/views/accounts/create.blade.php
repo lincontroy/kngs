@@ -112,20 +112,7 @@
                         <!-- Status & Type Row -->
                         <div class="row mb-4">
 
-                            <div class="col-md-4">
-                                <label for="total_withdrawal" class="form-label fw-semibold">
-                                    <i class="fas fa-arrow-down text-warning me-2"></i>Total Withdrawal
-                                </label>
-                                <div class="input-group">
-                                    <span class="input-group-text">$</span>
-                                    <input type="number" class="form-control @error('total_withdrawal') is-invalid @enderror" 
-                                           id="total_withdrawal" name="total_withdrawal" step="0.01" min="0"
-                                           value="{{ old('total_withdrawal', $account->total_withdrawal) }}" placeholder="0.00" required>
-                                </div>
-                                @error('total_withdrawal')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
-                            </div>
+                           
                             
 
                             <div class="col-md-6">
