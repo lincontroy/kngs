@@ -25,7 +25,9 @@ class AccountsController extends Controller
                 'created_at'
             ])->with(['user' => function($query) {
                 $query->select('id', 'name', 'email');
-            }])->get();
+            }])
+            ->orderBy('id','DESC')
+            ->get();
 
             return response()->json([
                 'success' => true,
