@@ -14,6 +14,7 @@ class Account extends Model
         'currency',
         'active_deposit',
         'total_earnings',
+        'payouts',
         'total_withdrawal',
         'kyc_status',
         'account_type',

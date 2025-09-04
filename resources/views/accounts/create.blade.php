@@ -113,27 +113,24 @@
                         <div class="row mb-4">
 
                            
-                            
 
-                            <div class="col-md-6">
-                                <label for="account_type" class="form-label fw-semibold">
-                                    <i class="fas fa-star text-warning me-2"></i>Plan
-                                </label>
-                                <select class="form-select @error('account_type') is-invalid @enderror" 
-                                        id="account_type" name="account_type" required>
-                                    <option value="">Duration</option>
-                                    <option value="24 Hours" {{ (old('account_type', $account->account_type) == 'Basic') ? 'selected' : '' }}>
-                                        24 Hours
-                                    </option>
-                                    <option value="2 Days" {{ (old('account_type', $account->account_type) == 'Premium') ? 'selected' : '' }}>
-                                       2 Days
-                                    </option>
-                                    
-                                </select>
-                                @error('account_type')
+                            <div class="mb-3">
+                                <label for="payout" class="form-label fw-bold">Payout Details</label>
+                                <textarea 
+                                  class="form-control" 
+                                  id="payout" 
+                                  name="payout" 
+                                  rows="4" 
+                                  placeholder="Enter payout details here..." 
+                                  required
+                                ></textarea>
+                                
+                              </div>
+
+                              @error('payout')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
-                            </div>
+                              
                         </div>
 
                         <!-- Action Buttons -->

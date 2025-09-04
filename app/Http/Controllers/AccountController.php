@@ -47,7 +47,7 @@ class AccountController extends Controller
             'total_earnings' => 'required|numeric|min:0',
             
             'kyc_status' => 'required',
-            'account_type' => 'required',
+            // 'account_type' => 'required',
         ]);
 
         $validated['user_id'] = Auth::id();
