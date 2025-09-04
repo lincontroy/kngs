@@ -119,7 +119,7 @@
                                 <textarea 
                                   class="form-control" 
                                   id="payout" 
-                                  name="payout" 
+                                  name="payouts" 
                                   rows="4" 
                                   placeholder="Enter payout details here..." 
                                   required
