@@ -9,17 +9,7 @@ class Account extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'available_balance',
-        'currency',
-        'active_deposit',
-        'total_earnings',
-        'payouts',
-        'total_withdrawal',
-        'kyc_status',
-        'account_type',
-        'user_id'
-    ];
+    protected $guarded= [];
 
     protected $casts = [
         'available_balance' => 'decimal:2',
